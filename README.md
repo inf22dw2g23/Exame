@@ -65,6 +65,6 @@ _As tecnologias usadas neste projeto, foram as seguites:_
 <br>
 
 ## Grupo _23_
+* Bernardo Magalhães [A38819@umaia.pt](mailto:A38819@umaia.pt)
 * Dario Rodrigues [A038042@umaia.pt](mailto:A038042@umaia.pt)
 * João Aragão [A0939132@umaia.pt](mailto:A0939132@umaia.pt)
-* Bernardo Magalhães [A38819@umaia.pt](mailto:A38819@umaia.pt)
