@@ -1,6 +1,6 @@
 # Parte-1
 
-Neste repositório está o projeto desenvolvido para a Unidade Curricular Desenvolvimento Web II, do segundo semestre do segundo ano do curso de Informática da Universidade da Maia. Desenvolvido pelo Grupo _23_: [Dario Rodrigues](mailto:A038042@umaia.pt), [João Aragão](mailto:A0939132@umaia.pt) e [Bernardo Magalhães](mailto:A38819@umaia.pt).
+Neste repositório está o projeto desenvolvido para a Unidade Curricular Desenvolvimento Web II, do segundo semestre do segundo ano do curso de Informática da Universidade da Maia. Desenvolvido pelo Grupo _23_: [Bernardo Magalhães](mailto:A38819@umaia.pt), [Dario Rodrigues](mailto:A038042@umaia.pt) e [João Aragão](mailto:A0939132@umaia.pt).
 
 ## Tema
 
