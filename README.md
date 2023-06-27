@@ -38,7 +38,6 @@ _O repositório está organizado da seguite maneira:_
 | ![1](doc_P2/1.png)           | ![2](doc_P2/2.png)  |
 | ---------------------------- | ----------- |
 | ![3](doc_P2/3.png)           | ![4](doc_P2/4.png)  |
-| ---------------------------- | ----------- |
 | ![5](doc_P2/5.png)           | ![6](doc_P2/6.png)  |
 
 ## Tecnologias Utilizadas
