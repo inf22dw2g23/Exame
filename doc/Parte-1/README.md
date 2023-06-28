@@ -6,6 +6,12 @@ Neste repositório está o projeto desenvolvido para a Unidade Curricular Desenv
 
 Este trabalho tem como objetivo criar um serviço web para gestão de eventos desportivos. O sistema permite o registo de jogadores, criação de jogos e registo de resultados. Além disso, os utilizadores autenticados têm acesso a recursos protegidos, como a listagem de jogadores e jogos.
 
+## Galeria 
+
+| ![1](doc/1.png)           | ![2](doc/2.png)  |
+| ---------------------------- | ----------- |
+| ![3](doc/3.png)           |
+
 ## Tecnologias
 
 As principais tecnologias utilizadas neste projeto são:
