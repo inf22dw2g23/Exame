@@ -8,9 +8,9 @@ Este trabalho tem como objetivo criar um serviço web para gestão de eventos de
 
 ## Galeria 
 
-| ![1](1.png)           | ![2](doc\Parte-1\2.png)  |
+| ![1](1.png)           | ![2](2.png)  |
 | ---------------------------- | ----------- |
-| ![3](doc\Parte-1\3.png)           |
+| ![3](3.png)           |
 
 ## Tecnologias
 
