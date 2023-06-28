@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-const ProfilePage = () => {
+const Perfil = () => {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleUpdateProfile = async (e) => {
     e.preventDefault();
@@ -12,8 +13,8 @@ const ProfilePage = () => {
     try {
       const response = await axios.put('http://localhost:3000/perfil', {
         name: name,
-        email: email,
         password: password,
+        confirmPassword: confirmPassword,
       });
 
       // Profile update successful, handle the response as needed
@@ -27,25 +28,36 @@ const ProfilePage = () => {
   return (
     <div className="page">
       <div className="cover">
-        <h2>Profile</h2>
+        
         <form onSubmit={handleUpdateProfile} className="login-form">
+          <h2>Perfil</h2>
           <div>
             <label>Name:</label>
             <input type="text" className="input" name="name" value={name} onChange={(e) => setName(e.target.value)} />
           </div>
           <div>
-            <label>Email:</label>
-            <input type="email" className="input" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-          </div>
-          <div>
             <label>Password:</label>
             <input type="password" className="input" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
+          <div>
+            <label>Confirm Password:</label>
+            <input type="password" className="input" name="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+          </div>
           <button type="submit" className="login-form">Save</button>
         </form>
+        <br></br>
+        <div align="center">
+        <button class="btn" align="center">
+          <Link to="/tictactoe" align="center">Jogar Tic Tac Toe</Link>
+        </button>
+        <button class="btn" align="center" className="logout-btn">
+          <Link to="/login" align="center">Logout</Link>
+        </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default ProfilePage;
+export default Perfil;
+

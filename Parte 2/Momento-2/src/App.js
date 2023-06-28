@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Link, Routes, Navigate } from 'react-router-dom';
 import Login from './components/auth/Login';
 import Register from './components/auth/Registo';
+import Perfil from './components/auth/Perfil';
 import "./App.css";
 import TicTacToe from "./TicTacToe";
 
@@ -39,6 +40,7 @@ function App() {
             element={isRegistered ? <Navigate to="/login" /> : <Register onRegistration={handleRegistration} />}
           />
           <Route path="/tictactoe" element={<TicTacToe />} />
+          <Route path="/perfil" element={<Perfil />} /> 
         </Routes>
       </div>
     </Router>

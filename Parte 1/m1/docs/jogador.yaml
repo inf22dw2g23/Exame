@@ -1,0 +1,147 @@
+Jogador:
+  /jogadores/count:
+    get:
+      tags: [Jogador]
+      summary: Retorna o número total de jogadores
+      responses:
+        '200':
+          description: Requisição bem-sucedida
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                    description: Número total de jogadores
+
+  /jogadores:
+    get:
+      tags: [Jogador]
+      summary: Retorna todos os jogadores
+      responses:
+        '200':
+          description: Requisição bem-sucedida
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Jogador'
+
+    post:
+      tags: [Jogador]
+      summary: Cria um novo jogador
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JogadorInput'
+      responses:
+        '200':
+          description: Jogador criado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Jogador'
+
+  /jogadores/{id}:
+    get:
+      tags: [Jogador]
+      summary: Retorna os detalhes de um jogador específico
+      parameters:
+        - name: id
+          in: path
+          description: ID do jogador
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Requisição bem-sucedida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Jogador'
+        '404':
+          description: Jogador não encontrado
+
+    put:
+      tags: [Jogador]
+      summary: Atualiza os detalhes de um jogador específico
+      parameters:
+        - name: id
+          in: path
+          description: ID do jogador
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JogadorInput'
+      responses:
+        '200':
+          description: Jogador atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Jogador'
+        '404':
+          description: Jogador não encontrado
+
+    delete:
+      tags: [Jogador]
+      summary: Exclui um jogador específico
+      parameters:
+        - name: id
+          in: path
+          description: ID do jogador
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Jogador excluído com sucesso
+        '404':
+          description: Jogador não encontrado
+
+components:
+  schemas:
+    Jogador:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ID do jogador
+        nome:
+          type: string
+          description: Nome do jogador
+        email:
+          type: string
+          description: Email do jogador
+        senha:
+          type: string
+          description: Senha do jogador
+        data_registo:
+          type: string
+          description: Data de registro do jogador
+
+    JogadorInput:
+      type: object
+      properties:
+        nome:
+          type: string
+          description: Nome do jogador
+        email:
+          type: string
+          description: Email do jogador
+        senha:
+          type: string
+          description: Senha do jogador
+        data_registo:
+          type: string
+          description: Data de registro do jogador

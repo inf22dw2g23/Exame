@@ -32,7 +32,7 @@ app.get('/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   (req, res) => {
     // Autenticação bem-sucedida, redirecionar ou responder com uma mensagem
-    res.redirect('/dashboard');
+    res.redirect('/tictactoe');
   }
 );
 
