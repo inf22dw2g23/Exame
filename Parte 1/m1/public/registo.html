@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>API Plataforma de Jogos com OAuth 2.0 (Página de Registro)</title>
+  </head>
+  <body>
+    <h1>Página de Registro</h1>
+    <form action="/registo" method="POST">
+      <label for="name">Nome de Usuário:</label>
+      <input type="text" id="name" name="name" required>
+      <br><br>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+      <br><br>
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required>
+      <br><br>
+      <input type="submit" value="Registrar">
+    </form>
+    <br><br>
+    <a href="/login">Já tem uma conta? Faça login aqui.</a>
+    <br><br>
+  </body>
+</html>
