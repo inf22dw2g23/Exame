@@ -15,7 +15,7 @@ const login = async (req, res) => {
       res.status(401).json({ error: 'Credenciais inválidas' });
     } else {
       // Successful authentication
-      res.redirect('/dashboard'); // Redireciona para a página de login
+      res.redirect('/tictactoe'); // Redireciona para a página de login
     }
   } catch (error) {
     console.error(error);
@@ -227,7 +227,7 @@ const callbackController = async (req, res) => {
           req.session.accessToken = accessToken;
   
           // Redirecione para a página principal ou para outra rota protegida
-          res.redirect('/dashboard');
+          res.redirect('/tictactoe');
         } else {
           // Tratamento de erro caso a solicitação não seja bem-sucedida
           console.error('Failed to exchange authorization code for access token:', response.data);

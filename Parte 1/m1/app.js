@@ -114,10 +114,10 @@ app.use(passport.session());
 // Middleware de autenticação
 const ensureAuthenticated = (req, res, next) => {
   if (req.isAuthenticated()) {
-    // O usuário está autenticado, continue para a próxima função de middleware
+    // O utilizador está autenticado, continue para a próxima função de middleware
     return next();
   } else {
-    // O usuário não está autenticado, redirecione para a página de login
+    // O utilizador não está autenticado, redirecione para a página de login
     res.redirect('/login');
   }
 };
@@ -227,11 +227,11 @@ app.get('/callback', async (req, res) => {
 
     // Verifica se o token de acesso foi obtido com sucesso
     if (accessToken) {
-      // Armazena o token de acesso na sessão do usuário
+      // Armazena o token de acesso na sessão do utilizador
       req.session.accessToken = accessToken;
 
       // Redireciona para a página principal ou para outra rota protegida
-      res.redirect('/dashboard');
+      res.redirect('/tictactoe');
     } else {
       // Tratamento de erro caso a troca do código de autorização falhe
       res.status(500).send('Failed to exchange authorization code for access token');

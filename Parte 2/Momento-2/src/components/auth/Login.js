@@ -5,7 +5,6 @@ import GitHubLogin from 'react-github-login';
 import { FaGithub } from 'react-icons/fa';
 import './LoginForm.css';
 
-
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
@@ -21,11 +20,11 @@ const Login = () => {
         password: password,
       });
 
-      // Login successful, handle the response as needed
+      // Login com Sucesso
       console.log(response.data);
-      navigate('/tictactoe'); // Redirecionamento para a página TicTacToe
+      navigate('/tictactoe'); // Redireciona para a página TicTacToe
     } catch (error) {
-      // Login failed, handle the error
+      // Login falhou
       console.error(error);
       setShowAuthMessage(true); // Mostrar mensagem de autenticação necessária
     }
@@ -33,10 +32,11 @@ const Login = () => {
 
   const responseGithub = (response) => {
     axios
-      .post('http://localhost:3000/auth/github', response)
+      .post('http://localhost:3000/auth/github/callback', response)
       .then((res) => {
         // Handle the response after GitHub login
         console.log(res.data);
+        navigate('/tictactoe'); // Redireciona para a página TicTacToe
       })
       .catch((error) => {
         // Handle errors
@@ -74,7 +74,7 @@ const Login = () => {
         <div className="github-btn-container">
           <GitHubLogin
             clientId="8149bd792fa6e752b682"
-            redirectUri="http://localhost:3000/callback"
+            redirectUri="http://localhost:3000/auth/github/callback"
             onSuccess={responseGithub}
             onFailure={responseGithub}
             className="github-btn"

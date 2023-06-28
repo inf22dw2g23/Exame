@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Square from "./Square";
 import EndGame from "./EndGame";
+import { useNavigate } from "react-router-dom";
+import "./App.css";
 
 const INITIAL = "";
 const A_PLAYER = "X";
@@ -22,6 +24,7 @@ function TicTacToe() {
   const [gameFinished, setGameFinished] = useState(false);
   const [draw, setDraw] = useState(false);
   const [winCount, setwinCount] = useState({ A: 0, B: 0 });
+  const navigate = useNavigate();
 
   function isGameOver() {
     if (!gameFinished) {
@@ -33,8 +36,8 @@ function TicTacToe() {
           grid[winCombination[i][2]] === A_PLAYER
         ) {
           setGameFinished(true);
-          setwinCount({ ...winCount, A: winCount.A + 1 });
-          console.log("A WON");
+          setwinCount({ ...winCount, X: winCount.A + 1 });
+          console.log("X WON");
           return;
         }
       }
@@ -47,8 +50,8 @@ function TicTacToe() {
           grid[winCombination[i][2]] === B_PLAYER
         ) {
           setGameFinished(true);
-          setwinCount({ ...winCount, B: winCount.B + 1 });
-          console.log("B WON");
+          setwinCount({ ...winCount, O: winCount.B + 1 });
+          console.log("O WON");
           return;
         }
       }
@@ -57,7 +60,7 @@ function TicTacToe() {
       if (!grid.includes(INITIAL)) {
         setDraw(true);
         setGameFinished(true);
-        console.log("DRAW");
+        console.log("Empate");
       }
     }
   }
@@ -91,14 +94,29 @@ function TicTacToe() {
     );
     setPlayer(!player);
   }
+  
+  function goToProfile() {
+    navigate("/perfil");
+  }
+  
+  function handleLogout() {
+    // Lógica para fazer logout
+    navigate("/");
+  }
 
   return (
-    <div>
+    <div align="center">
+      <button onClick={handleLogout} className="logout-btn">
+        Logout
+      </button>
+      <br></br>
       <span className="win-history">
-        A's Ganhou: {winCount.A}
+        X's Ganhou: {winCount.A}
         <br />
-        B's Ganhou: {winCount.B}
+        O's Ganhou: {winCount.B}
       </span>
+      <br></br>
+      <br></br>
       {gameFinished && (
         <EndGame
           winCount={winCount}
@@ -109,6 +127,11 @@ function TicTacToe() {
         />
       )}
       <Square clickedArray={grid} handleClick={handleClick} />
+      <br></br>
+      <br></br>
+      <div>
+        <button onClick={goToProfile} className="btn">Ir para o Perfil</button>
+      </div>
     </div>
   );
 }

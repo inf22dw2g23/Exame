@@ -1,0 +1,148 @@
+Partida:
+Partida:
+  /partidas/count:
+    get:
+      tags: [Partida]
+      summary: Retorna o número total de partidas
+      responses:
+        '200':
+          description: Requisição bem-sucedida
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                    description: Número total de partidas
+
+  /partidas:
+    get:
+      tags: [Partida]
+      summary: Retorna todas as partidas
+      responses:
+        '200':
+          description: Requisição bem-sucedida
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Partida'
+
+    post:
+      tags: [Partida]
+      summary: Cria uma nova partida
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PartidaInput'
+      responses:
+        '200':
+          description: Partida criada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Partida'
+
+  /partidas/{id}:
+    get:
+      tags: [Partida]
+      summary: Retorna os detalhes de uma partida específica
+      parameters:
+        - name: id
+          in: path
+          description: ID da partida
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Requisição bem-sucedida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Partida'
+        '404':
+          description: Partida não encontrada
+
+    put:
+      tags: [Partida]
+      summary: Atualiza os detalhes de uma partida específica
+      parameters:
+        - name: id
+          in: path
+          description: ID da partida
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PartidaInput'
+      responses:
+        '200':
+          description: Partida atualizada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Partida'
+        '404':
+          description: Partida não encontrada
+
+    delete:
+      tags: [Partida]
+      summary: Exclui uma partida específica
+      parameters:
+        - name: id
+          in: path
+          description: ID da partida
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Partida excluída com sucesso
+        '404':
+          description: Partida não encontrada
+
+components:
+  schemas:
+    Partida:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ID da partida
+        jogador1_id:
+          type: integer
+          description: ID do jogador 1
+        jogador2_id:
+          type: integer
+          description: ID do jogador 2
+        tabuleiro:
+          type: string
+          description: Tabuleiro da partida
+        vencedor_id:
+          type: integer
+          description: ID do jogador vencedor
+
+    PartidaInput:
+      type: object
+      properties:
+        jogador1_id:
+          type: integer
+          description: ID do jogador 1
+        jogador2_id:
+          type: integer
+          description: ID do jogador 2
+        tabuleiro:
+          type: string
+          description: Tabuleiro da partida
+        vencedor_id:
+          type: integer
+          description: ID do jogador vencedor
