@@ -244,4 +244,19 @@ const callbackController = async (req, res) => {
     }
   };
 
-module.exports = { login, logout, registo, protected, dashboard, authGitHub, authCallback, callback, me, gitHubMe,callbackController,editarPerfil,getPerfil,perfil };
+module.exports = { 
+  login, 
+  logout, 
+  registo, 
+  protected, 
+  dashboard, 
+  authGitHub, 
+  authCallback, 
+  callback, 
+  me, 
+  gitHubMe,
+  callbackController,
+  editarPerfil,
+  getPerfil,
+  perfil 
+};
