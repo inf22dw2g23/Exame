@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const utilizadorController = require('../controllers/utilizadorController');
 
-// Rota para registro de Utilizador
+// Rota para registo de Utilizador
 router.post('/registo', utilizadorController.registo);
 
 // Rota para login de Utilizador
@@ -13,25 +13,25 @@ router.get('/logout', utilizadorController.logout);
 
 router.put('/perfil',utilizadorController.perfil);
 
-// Rota protegida (exemplo)
+// Rota protegida
 router.get('/protected', utilizadorController.protected);
 
-// Rota para exibição do dashboard (exemplo)
+// Rota para exibição do dashboard
 router.get('/dashboard', utilizadorController.dashboard);
 
-// Rota para autenticação com GitHub (exemplo)
+// Rota para autenticação com GitHub
 router.get('/auth/github', utilizadorController.authGitHub);
 
-// Rota de callback para autenticação com GitHub (exemplo)
+// Rota de callback para autenticação com GitHub
 router.get('/auth/github/callback', utilizadorController.authCallback);
 
-// Rota para obter detalhes do Utilizador autenticado (exemplo)
+// Rota para obter detalhes do Utilizador autenticado
 router.get('/me', utilizadorController.me);
 
-// Rota para obter informações do Utilizador do GitHub (exemplo)
+// Rota para obter informações do Utilizador do GitHub
 router.get('/github/me', utilizadorController.gitHubMe);
 
-// Rota de callback para troca de código de autorização por token de acesso (exemplo)
+// Rota de callback para troca de código de autorização por token de acesso
 router.get('/callback', utilizadorController.callbackController);
 
 module.exports = router;

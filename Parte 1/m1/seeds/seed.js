@@ -4,7 +4,7 @@ const Jogador = require('../models/Jogador');
 
 async function seed() {
   try {
-    // Código para criar registros iniciais na base de dados
+    // Código para criar registos iniciais na base de dados
     //Tabela users
     await User.create({name: 'John Doe', email: 'johndoe@example.com', password: '123'});
     await User.create({name: 'Jane Smith', email: 'janesmith@example.com', password: '123'});

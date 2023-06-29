@@ -97,7 +97,6 @@ passport.use(new GitHubStrategy({
   clientSecret: GITHUB_CLIENT_SECRET,
   callbackURL: 'http://localhost:3000/auth/github/callback',
 }, (accessToken, refreshToken, profile, done) => {
-  // ...
 }));
 
 // Configure sessions
@@ -114,10 +113,10 @@ app.use(passport.session());
 // Middleware de autenticação
 const ensureAuthenticated = (req, res, next) => {
   if (req.isAuthenticated()) {
-    // O utilizador está autenticado, continue para a próxima função de middleware
+    // O utilizador está autenticado
     return next();
   } else {
-    // O utilizador não está autenticado, redirecione para a página de login
+    // O utilizador não está autenticado
     res.redirect('/login');
   }
 };
