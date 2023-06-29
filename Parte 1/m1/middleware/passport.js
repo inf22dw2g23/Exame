@@ -37,7 +37,7 @@ passport.use(
       }
 
       // Gere um token JWT
-      const token = jwt.sign({ id: user.id }, 'seuSegredo', { expiresIn: '1h' });
+      const token = jwt.sign({ id: user.id }, 'ebe8ae0d893965ee8b099e9baf9f9c7a0a51feb7612ecf85da125788ddf86865', { expiresIn: '1h' });
 
       // Adicione o token ao perfil do utilizador
       profile.token = token;
