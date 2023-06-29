@@ -1,0 +1,35 @@
+version: '3'
+services:
+  db:
+    image: mysql:5-debian
+    restart: always
+    expose:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_DATABASE: plataforma_jogos
+    ports:
+      - '3306:3306'
+
+  api:
+    build:    
+      context: ./Momento-1
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: 12345678
+      DB_NAME: plataforma_jogos
+    ports:
+      - '3000:3000'
+
+  frontend:
+    build:    
+      context: ./Momento-2
+      dockerfile: Dockerfile
+    depends_on:
+      - api
+    ports:
+      - '3001:3001'
