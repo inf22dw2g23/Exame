@@ -1,39 +1,54 @@
-# Tic Tac Toe Game
+# Parte 2 -> React
 
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![VS Code Insiders](https://img.shields.io/badge/VS%20Code%20Insiders-35b393.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+Neste repositório está o projeto desenvolvido para a Unidade Curricular Desenvolvimento Web II, do segundo semestre do segundo ano do curso de Informática da Universidade da Maia. Desenvolvido pelo Grupo _23_: [Bernardo Magalhães](mailto:A38819@umaia.pt), [Dario Rodrigues](mailto:A038042@umaia.pt) e [João Aragão](mailto:A0939132@umaia.pt).
 
+## Tema
 
-This is a Simple Tic Tac Toe Game playable for 2 players.
+Este trabalho tem como objetivo criar um serviço web para gestão de eventos desportivos. O sistema permite o registo de jogadores, criação de jogos e registo de resultados. Além disso, os utilizadores autenticados têm acesso a recursos protegidos, como a listagem de jogadores e jogos.
 
-#### Live Link - https://shobhit1338.github.io/Tic-Tac-Toe-using-React/
+## Organização do repositório 
 
-## Features 
+_O repositório está organizado da seguite maneira:_
+* **Código Fonte API** está na pasta [API](src/).
+* **Código Fonte ReactJS** está na pasta [react](src/).
+* **Documentação** está na pasta [doc](src/).
+* [Documento MYSQL](src/api/openapi.yaml) para criação da Base de Dados.
+* [Documento Docker-compose](Queries_base_de_dados.sql)para puxar as imagens dos repositórios DockerHub e montar a aplicação.
 
-- Play as A and B with your partner (2 Players).
-- Click on any valid Box to put your sign of either 'X' or 'O'.
-- Already clicked box becomes disabled.
-- Result pops-up after the game is finished.
-- Restart a new game by clicking on 'Restart Game'.
-- Track game history above the box with count of each player's win games.
-- Clear all previous history of games by clicking on 'Clear History'.
+## Galeria 
 
-> This Application was created using JavaScript, React.js, and HTML/CSS.
+| ![1](doc/1.png)           | ![2](doc/2.png)  | ![3](doc/3.png)           |
+| ---------------------------- | ----------- | ----------- |
+| ![4](doc/4.png)           | ![5](doc/5.png)  | ![6](doc/6.png)           |
 
-## Sample GIF
+## Tecnologias Utilizadas
 
-![Tic Tac Toe Game](https://raw.githubusercontent.com/Shobhit1338/Tic-Tac-Toe-using-React/main/TicTacToe.gif)
+_As tecnologias usadas neste projeto, foram as seguites:_
+* OAuth 2.0
+* JavaScript
+* NodeJS
+* MySQL
+* OpenAPI
+* HTML5
+* CSS3
+* JS
 
-## Installation
+### Frameworks e Livrarias 
 
-This requires [React](https://reactjs.org/) v18.2.0+ to run.
+* Docker
+* NodeJS
+* ReactJS
 
-Install the dependencies and start the server.
+### Apresentação da API
+* Capítulo 1: [Apresentação da API](doc/c1.md)
+### Recursos
+* Capítulo 2: [Recursos](doc/c2.md)
+### Produto
+* Capítulo 3: [Resultado Final](doc/c3.md)
 
-```sh
-npm run start
-```
+<br>
 
-
-**Enjoy The Game!**
+## Grupo _23_
+* Bernardo Magalhães [A38819@umaia.pt](mailto:A38819@umaia.pt)
+* Dario Rodrigues [A038042@umaia.pt](mailto:A038042@umaia.pt)
+* João Aragão [A0939132@umaia.pt](mailto:A0939132@umaia.pt)
