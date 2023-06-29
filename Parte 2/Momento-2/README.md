@@ -4,12 +4,12 @@ Neste repositório está o projeto desenvolvido para a Unidade Curricular Desenv
 
 ## Tema
 
-Este trabalho tem como objetivo criar um serviço web para gestão de eventos desportivos. O sistema permite o registo de jogadores, criação de jogos e registo de resultados. Além disso, os utilizadores autenticados têm acesso a recursos protegidos, como a listagem de jogadores e jogos.
+Este trabalho tem como objetivo criar um serviço web para uma plataforma de jogos online, que está protegida com uma API de autenticação desenvolvida pelo nosso grupo.
 
 ## Organização do repositório 
 
 _O repositório está organizado da seguite maneira:_
-* **Código Fonte API** está na pasta [API](src/).
+* **Código Fonte API** está na pasta [API](../../Parte%201/m1/).
 * **Código Fonte ReactJS** está na pasta [react](src/).
 * **Documentação** está na pasta [doc](src/).
 * [Documento MYSQL](src/api/openapi.yaml) para criação da Base de Dados.
