@@ -15,7 +15,7 @@ const login = async (req, res) => {
       res.status(401).json({ error: 'Credenciais inválidas' });
     } else {
       // Successful authentication
-      res.redirect('/tictactoe'); // Redireciona para a página de login
+      res.redirect('/dashboard'); // Redireciona para a página de dashboard
     }
   } catch (error) {
     console.error(error);
