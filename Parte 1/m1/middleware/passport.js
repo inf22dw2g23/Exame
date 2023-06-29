@@ -25,7 +25,7 @@ passport.deserializeUser(function (user, done) {
 passport.use(
   new GitHubStrategy(passportOptions, async (accessToken, refreshToken, profile, done) => {
     try {
-      // Verifique se o utilizador já existe no banco de dados pelo ID do GitHub
+      // Verifique se o utilizador já existe no Base de Dados pelo ID do GitHub
       let user = await User.findOne({ where: { githubId: profile.id } });
 
       if (!user) {
