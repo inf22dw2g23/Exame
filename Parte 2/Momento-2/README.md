@@ -9,11 +9,10 @@ Este trabalho tem como objetivo criar um serviço web para uma plataforma de jog
 ## Organização do repositório 
 
 _O repositório está organizado da seguite maneira:_
-* **Código Fonte API** está na pasta [API](../../Parte%201/m1/).
-* **Código Fonte ReactJS** está na pasta [react](src/).
-* **Documentação** está na pasta [doc](src/).
-* [Documento MYSQL](src/api/openapi.yaml) para criação da Base de Dados.
-* [Documento Docker-compose](Queries_base_de_dados.sql)para puxar as imagens dos repositórios DockerHub e montar a aplicação.
+* **Código Fonte API** está na pasta [m1](../../Parte%201/m1/).
+* **Código Fonte ReactJS** está na pasta [Momento-2](src/).
+* **Documentação** está na pasta [doc](../Momento-2/doc/).
+* [Documento MYSQL](../../Parte%201/m1/seeds/seed.js) para criação da Base de Dados.
 
 ## Galeria 
 
