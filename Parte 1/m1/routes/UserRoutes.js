@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 const utilizadorController = require('../controllers/utilizadorController');
 
-// Rota para registro de usuário
+// Rota para registro de Utilizador
 router.post('/registo', utilizadorController.registo);
 
-// Rota para login de usuário
+// Rota para login de Utilizador
 router.post('/login', utilizadorController.login);
 
-// Rota para logout de usuário
+// Rota para logout de Utilizador
 router.get('/logout', utilizadorController.logout);
 
 router.put('/perfil',utilizadorController.perfil);
@@ -25,10 +25,10 @@ router.get('/auth/github', utilizadorController.authGitHub);
 // Rota de callback para autenticação com GitHub (exemplo)
 router.get('/auth/github/callback', utilizadorController.authCallback);
 
-// Rota para obter detalhes do usuário autenticado (exemplo)
+// Rota para obter detalhes do Utilizador autenticado (exemplo)
 router.get('/me', utilizadorController.me);
 
-// Rota para obter informações do usuário do GitHub (exemplo)
+// Rota para obter informações do Utilizador do GitHub (exemplo)
 router.get('/github/me', utilizadorController.gitHubMe);
 
 // Rota de callback para troca de código de autorização por token de acesso (exemplo)
