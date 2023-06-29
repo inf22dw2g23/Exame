@@ -133,7 +133,7 @@ const editarPerfil = async (req, res) => {
       user.password = new_password;
     }
 
-    // Salva as alterações no banco de dados
+    // Salva as alterações no Base de Dados
     await user.save();
 
     res.json({ message: 'Perfil atualizado com sucesso' });
