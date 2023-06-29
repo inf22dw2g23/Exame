@@ -12,7 +12,7 @@
     background: #f5f5f5;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: auto; /* Adicionado para centralizar horizontalmente */
+    margin: auto; 
   }
   
   .login-form h2 {
@@ -58,7 +58,7 @@
   .github-btn-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Espaçamento adicionado para separar o botão do formulário */
+    margin-top: 20px;
   }
   
   .github-btn {

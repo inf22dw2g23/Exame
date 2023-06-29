@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Link, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Login from './components/auth/Login';
 import Register from './components/auth/Registo';
 import Perfil from './components/auth/Perfil';
@@ -11,12 +11,10 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleRegistration = () => {
-    // Lógica de registro aqui
     setIsRegistered(true);
   };
 
   const handleLogin = () => {
-    // Lógica de login aqui
     setIsLoggedIn(true);
   };
 
