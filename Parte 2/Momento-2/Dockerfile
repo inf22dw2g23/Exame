@@ -1,5 +1,5 @@
 FROM node:14-alpine
-WORKDIR /src
+WORKDIR /Momento-2
 COPY package*.json ./
 RUN npm install
 COPY . .
