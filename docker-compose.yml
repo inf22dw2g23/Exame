@@ -9,11 +9,11 @@ services:
       MYSQL_ROOT_PASSWORD: 12345678
       MYSQL_DATABASE: plataforma_jogos
     ports:
-      - '3306:3306'
+      - '3310:3306'
 
   api:
     build:    
-      context: ./Momento-1
+      context: ./Parte 1/m1
       dockerfile: Dockerfile
     depends_on:
       - db
@@ -27,7 +27,7 @@ services:
 
   frontend:
     build:    
-      context: ./Momento-2
+      context: ./Parte 2/Momento-2
       dockerfile: Dockerfile
     depends_on:
       - api
