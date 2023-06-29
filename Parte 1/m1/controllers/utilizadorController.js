@@ -49,16 +49,16 @@ const registo = async (req, res) => {
 };
 
 const me = (req, res) => {
-  // Aqui você pode implementar a lógica para recuperar os detalhes do usuário atualmente autenticado
+  // Aqui você pode implementar a lógica para recuperar os detalhes do Utilizador atualmente autenticado
 
   // Exemplo:
-  const user = req.user; // Obtenha o objeto de usuário autenticado da requisição
+  const user = req.user; // Obtenha o objeto de Utilizador autenticado da requisição
 
   if (user) {
-    // Se o usuário estiver autenticado, retorne os detalhes do usuário
+    // Se o Utilizador estiver autenticado, retorne os detalhes do Utilizador
     res.json({ user });
   } else {
-    // Se o usuário não estiver autenticado, retorne um erro ou uma mensagem adequada
+    // Se o Utilizador não estiver autenticado, retorne um erro ou uma mensagem adequada
     res.status(401).json({ error: "Utilizador não autenticado" });
   }
 };
@@ -87,7 +87,7 @@ const getPerfil = (req, res) => {
     if (req.isAuthenticated()) {
       const user = req.user;
       if (!user) {
-        res.status(404).json({ error: 'Usuário não encontrado' });
+        res.status(404).json({ error: 'Utilizador não encontrado' });
         return;
       }
 
@@ -106,15 +106,15 @@ const getPerfil = (req, res) => {
 
 const editarPerfil = async (req, res) => {
   const { name, email, current_password, new_password } = req.body;
-  const userId = req.session.userId; // Obtém o ID do usuário da sessão
+  const userId = req.session.userId; // Obtém o ID do Utilizador da sessão
 
   try {
-    // Busca o usuário pelo ID
+    // Busca o Utilizador pelo ID
     const user = await User.findByPk(userId);
 
-    // Verifica se o usuário existe
+    // Verifica se o Utilizador existe
     if (!user) {
-      res.status(404).json({ error: 'Usuário não encontrado' });
+      res.status(404).json({ error: 'Utilizador não encontrado' });
       return;
     }
 
@@ -124,7 +124,7 @@ const editarPerfil = async (req, res) => {
       return;
     }
 
-    // Atualiza os dados do usuário
+    // Atualiza os dados do Utilizador
     user.name = name;
     user.email = email;
 
