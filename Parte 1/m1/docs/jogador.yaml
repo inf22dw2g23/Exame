@@ -125,7 +125,7 @@ components:
           description: Email do jogador
         senha:
           type: string
-          description: Senha do jogador
+          description: password do jogador
         data_registo:
           type: string
           description: Data de registro do jogador
@@ -141,7 +141,7 @@ components:
           description: Email do jogador
         senha:
           type: string
-          description: Senha do jogador
+          description: password do jogador
         data_registo:
           type: string
           description: Data de registro do jogador

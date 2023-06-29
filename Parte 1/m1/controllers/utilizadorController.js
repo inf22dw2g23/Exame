@@ -118,9 +118,9 @@ const editarPerfil = async (req, res) => {
       return;
     }
 
-    // Verifica se a senha atual é válida
+    // Verifica se a password atual é válida
     if (!(await user.validPassword(current_password))) {
-      res.status(401).json({ error: 'Senha atual inválida' });
+      res.status(401).json({ error: 'Password atual inválida' });
       return;
     }
 
@@ -128,7 +128,7 @@ const editarPerfil = async (req, res) => {
     user.name = name;
     user.email = email;
 
-    // Verifica se foi fornecida uma nova senha
+    // Verifica se foi fornecida uma nova password
     if (new_password) {
       user.password = new_password;
     }
