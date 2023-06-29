@@ -49,10 +49,8 @@ const registo = async (req, res) => {
 };
 
 const me = (req, res) => {
-  // Aqui você pode implementar a lógica para recuperar os detalhes do Utilizador atualmente autenticado
 
-  // Exemplo:
-  const user = req.user; // Obtenha o objeto de Utilizador autenticado da requisição
+  const user = req.user; 
 
   if (user) {
     // Se o Utilizador estiver autenticado, retorne os detalhes do Utilizador
@@ -109,7 +107,7 @@ const editarPerfil = async (req, res) => {
   const userId = req.session.userId; // Obtém o ID do Utilizador da sessão
 
   try {
-    // Busca o Utilizador pelo ID
+    // Procura o Utilizador pelo ID
     const user = await User.findByPk(userId);
 
     // Verifica se o Utilizador existe
@@ -175,10 +173,10 @@ const gitHubMe = (req, res) => {
 
 const callbackController = async (req, res) => {
     try {
-      // Verifique se o código de autorização está presente na consulta da URL
+      // Verifica se o código de autorização está presente na consulta da URL
       const authorizationCode = req.query.code;
   
-      // Verifique se o código de autorização foi recebido corretamente
+      // Verifica se o código de autorização foi recebido corretamente
       if (authorizationCode) {
         const axios = require('axios');
         
@@ -219,7 +217,7 @@ const callbackController = async (req, res) => {
               res.send(response.data);
             })
             .catch(error => {
-              // Manipule erros ao fazer a solicitação para o token endpoint
+              // Manipula erros ao fazer a solicitação para o token endpoint
               console.error(error);
               res.status(500).send('Erro durante a troca de token');
             });
