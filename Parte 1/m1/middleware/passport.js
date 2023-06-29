@@ -2,7 +2,7 @@ const passport = require("passport");
 const GitHubStrategy = require("passport-github2").Strategy;
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const User = require('../models/User'); // Importe o modelo do utilizador
+const User = require('../models/User');
 
 const GITHUB_CLIENT_ID = "seuClientId";
 const GITHUB_CLIENT_SECRET = "seuClientSecret";
@@ -25,7 +25,7 @@ passport.deserializeUser(function (user, done) {
 passport.use(
   new GitHubStrategy(passportOptions, async (accessToken, refreshToken, profile, done) => {
     try {
-      // Verifique se o utilizador já existe no Base de Dados pelo ID do GitHub
+      // Verifica se o utilizador já existe no Base de Dados pelo ID do GitHub
       let user = await User.findOne({ where: { githubId: profile.id } });
 
       if (!user) {
@@ -33,7 +33,6 @@ passport.use(
         user = await User.create({
           githubId: profile.id,
           name: profile.displayName,
-          // Outras informações do perfil do utilizador do GitHub que você deseja salvar
         });
       }
 
